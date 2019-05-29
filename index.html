@@ -2,8 +2,6 @@
     Juan Carlos Jimenez
     Oscar Daniel Salazar
   -->
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,10 +33,10 @@
     //{ revert: true, helper: "clone", opacity: 0.7 }
 
     $( ".casilla" ).droppable({
-      accept: ".draggable",
 
+      accept: ".draggable",
       classes: {
-        "ui-droppable-active":"ui-state-active",
+        //"ui-droppable-active":"ui-state-active",
         "ui-droppable-hover": "ui-state-hover"
       },
 
@@ -46,7 +44,10 @@
         $( this )
           .addClass( "ui-state-highlight" )
           .find( "p" )
-            .html( "Dropped!" );
+          $(this).droppable("disable")
+          //$(".draggable").draggable("disable")  bloquea a todos los draggables
+            .html( document.getElementById(".casilla").value);
+            //.html("hhsh");
       }
     });
   } );
@@ -56,24 +57,24 @@
 
 </head>
 <body>
- 
+
  <table border="1">
    <tr>
-     <td> <div class="casilla" class="ui-widget-header"> </div></td>
-     <td> <div class="casilla"></div></td>
-     <td> <div class="casilla"></div></td>
+     <td> <div class="casilla" id="1" value="1"></div></td>
+     <td> <div class="casilla" id="2"></div></td>
+     <td> <div class="casilla" id="3"></div></td>
    </tr>
 
    <tr>
-     <td> <div class="casilla"></div></td>
-     <td> <div class="casilla"></div></td>
-     <td> <div class="casilla"></div></td>
+     <td> <div class="casilla" id="4"></div></td>
+     <td> <div class="casilla" id="5"></div></td>
+     <td> <div class="casilla" id="6"></div></td>
    </tr>
 
    <tr>
-     <td> <div class="casilla"></div></td>
-     <td> <div class="casilla"></div></td>
-     <td> <div class="casilla"></div></td>
+     <td> <div class="casilla" id="7"></div></td>
+     <td> <div class="casilla" id="8"></div></td>
+     <td> <div class="casilla" id="9"></div></td>
    </tr>
 
  </table>
@@ -81,34 +82,34 @@
 <br><br><hr>
 
 <table>
-  
-  <tr> 
-    <div  class="ui-widget-content draggable" >
+
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_x">
     <img src="X.jpg" width="80" height="80">
    </div>
   </tr>
-  
+
   <tr>
 
-  <div class="ui-widget-content draggable">
+  <div class="ui-widget-content draggable" id="img_x">
    <img src="X.jpg" width="80" height="80">
   </div>
-  </tr> 
+  </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_x">
     <img src="X.jpg" width="80" height="80">
    </div>
   </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_x">
     <img src="X.jpg" width="80" height="80">
    </div>
   </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_x">
     <img src="X.jpg" width="80" height="80">
    </div>
   </tr>
@@ -117,34 +118,34 @@
 
 <br><br><br><br><br><br><hr><br>
 <table>
-  
-  <tr> 
-    <div  class="ui-widget-content draggable">
+
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_o">
     <img src="O.jpg" width="80" height="80">
    </div>
   </tr>
-  
+
   <tr>
 
-  <div class="ui-widget-content draggable">
+  <div class="ui-widget-content draggable" id="img_o">
    <img src="O.jpg" width="80" height="80">
   </div>
-  </tr> 
+  </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_o">
     <img src="O.jpg" width="80" height="80">
    </div>
   </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_o">
     <img src="O.jpg" width="80" height="80">
    </div>
   </tr>
 
-  <tr> 
-    <div  class="ui-widget-content draggable">
+  <tr>
+    <div  class="ui-widget-content draggable" id="img_o">
     <img src="O.jpg" width="80" height="80">
    </div>
   </tr>
